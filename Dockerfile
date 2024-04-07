@@ -24,6 +24,6 @@ WORKDIR ${WORKDIR}
 COPY ./* ${WORKDIR}
 
 # Project initialization:
-RUN poetry install --no-interaction --no-ansi --no-root --no-dev
+RUN poetry install --no-interaction --no-ansi --no-root
 
 ENTRYPOINT [ "tail", "-F", "/dev/null" ]
