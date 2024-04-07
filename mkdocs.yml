@@ -1,0 +1,54 @@
+site_name: x-analyzer
+repo_url: https://github.com/kionawalker/x-analyzer
+site_url: https://kionawalker.github.io/x-analyzer
+site_description: X's post analysis tool with twikit
+site_author: Naoki Setoguchi
+edit_uri: edit/main/docs/
+repo_name: kionawalker/x-analyzer
+copyright: Maintained by <a href="https://kionawalker.com">Florian</a>.
+
+nav:
+  - Home: index.md
+  - Modules: modules.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+            setup_commands:
+                - import sys
+                - sys.path.append('../')
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/kionawalker/x-analyzer
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/x-analyzer
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
